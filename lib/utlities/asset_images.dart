@@ -8,4 +8,6 @@ class AssetImages {
   static String _getAssetIconJpg(String fileName) => 'assets/images/$fileName.jpg';
 
   static String logo = _getAssetIconPng('logo');
+
+  static String logo1 = _getAssetIconPng('logo1');
 }

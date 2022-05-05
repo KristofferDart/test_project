@@ -27,8 +27,9 @@ class Header extends StatelessWidget{
           height: MediaQuery.of(context).size.height * 0.1,
         ),
         Image.asset(
-          AssetImages.logo,
-          height: MediaQuery.of(context).size.height * 0.25,
+          AssetImages.logo1,
+          width: MediaQuery.of(context).size.width,
+
         ),
         SizedBox(
           height: 20,

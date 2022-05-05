@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:test_project/features/otp/otp_view.dart';
 import 'package:test_project/features/otp/view_model/otp_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:test_project/features/otp/widgets/app_button.dart';
@@ -53,7 +54,7 @@ class OtpInitialView extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: 20,),
-                  AppButton(label: 'Send OTP', callback: () {  },),
+                  AppButton(label: 'Send OTP', callback: ()=> Navigator.pushNamed(context, OtpView.route),),
                   Expanded(child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
@@ -79,7 +80,8 @@ class OtpInitialView extends StatelessWidget {
                             }),
                           ],
                         ),
-                      )
+                      ),
+                      SizedBox(height: 20,)
                     ],
                   ))
                 ],
