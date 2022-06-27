@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:test_project/features/otp/otp_view.dart';
+import 'package:test_project/features/cocktail/cocktail_details_view.dart';
 
-import '../features/otp/otp_initial_view.dart';
+import '../features/cocktail/cocktail_view.dart';
 
 class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case OtpView.route:
-        return MaterialPageRoute<dynamic>(builder: (_) => const OtpView());
+      case CocktailView.route:
+        return MaterialPageRoute<dynamic>(builder: (_) => const CocktailView());
 
-      case OtpInitialView.route:
-        return MaterialPageRoute<dynamic>(builder: (_) => const OtpInitialView());
+      case CocktailDetailsView.route:
+        final args = settings.arguments as CocktailDetailsViewArgs;
+        return MaterialPageRoute<dynamic>(
+            builder: (_) => CocktailDetailsView(
+              args: args,
+            ));
 
       default:
         return MaterialPageRoute<dynamic>(builder: (_) {

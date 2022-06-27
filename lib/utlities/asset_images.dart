@@ -7,7 +7,13 @@ class AssetImages {
 
   static String _getAssetIconJpg(String fileName) => 'assets/images/$fileName.jpg';
 
-  static String logo = _getAssetIconPng('logo');
+  static String icCheck = _getAssetIconPng('ic_check');
 
-  static String logo1 = _getAssetIconPng('logo1');
+  static String icX = _getAssetIconPng('ic_x');
+
+  static String icTag = _getAssetIconPng('ic_tag');
+
+  static String icGlass = _getAssetIconPng('ic_glass');
+
+  static String icAlcoholic = _getAssetIconPng('ic_alcoholic');
 }

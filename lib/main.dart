@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:test_project/features/otp/view_model/otp_view_model.dart';
+import 'package:test_project/features/cocktail/view_model/cocktail_view_model.dart';
 import 'package:test_project/utlities/app_router.dart';
+import 'features/cocktail/cocktail_view.dart';
 
-import 'features/otp/otp_initial_view.dart';
 
 void main() {
   runApp(const TestProject());
@@ -25,8 +25,8 @@ class _TestProjectState extends State<TestProject> {
     // TODO: implement build
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<OtpViewModel>(
-          create: (_) => OtpViewModel(),
+        ChangeNotifierProvider<CocktailViewModel>(
+          create: (_) => CocktailViewModel(),
         ),
       ],
       child: GestureDetector(
@@ -34,9 +34,10 @@ class _TestProjectState extends State<TestProject> {
         child: MaterialApp(
           title: "Dart",
           debugShowCheckedModeBanner: false,
+          theme: new ThemeData(scaffoldBackgroundColor: Colors.white),
           home: Navigator(
             key: _navigatorKey,
-            initialRoute: OtpInitialView.route,
+            initialRoute: CocktailView.route,
             onGenerateRoute: AppRouter.generateRoute,
           ),
         ),
